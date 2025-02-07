@@ -5,8 +5,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <div className="flex items-center justify-between py-6 bg-orange-400 bg-opacity-100 px-4">
+    <div className='bg-orange-400'>
+      <div className="flex items-center justify-between py-6  bg-opacity-100 px-4 max-w-screen-xl mx-auto">
         {/* Hamburger menu (visible on small screens) */}
         <div className="lg:hidden">
           <Hamburger toggle={setIsOpen} toggled={isOpen} size={20} />
@@ -15,6 +15,9 @@ const Navbar = () => {
         <div>Logo</div>
         <div>Search</div>
         <div className="hidden lg:block">User</div>
+        <div className="hidden lg:block">
+          <button>Switch to Admin</button>
+        </div>
       </div>
 
       {/* Mobile Sidebar Menu */}
@@ -26,11 +29,6 @@ const Navbar = () => {
           }`}
         >
             <div className="w-3/4 h-screen bg-gray-600 flex flex-col p-4">
-              
-
-
-           
-
 
 
               <div className="mb-4 font-bold text-white">Collapsable</div>
@@ -40,7 +38,7 @@ const Navbar = () => {
             </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
