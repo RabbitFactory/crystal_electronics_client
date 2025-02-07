@@ -26,7 +26,13 @@ const Navbar = () => {
           }`}
         >
             <div className="w-3/4 h-screen bg-gray-600 flex flex-col p-4">
-              <div className="mb-4 font-bold text-white">Collapsable</div>
+              
+
+
+           
+
+
+
               <div className="mb-4 font-bold text-white">Collapsable</div>
               <div className="mb-4 font-bold text-white">Collapsable</div>
               <div className="mb-4 font-bold text-white">Collapsable</div>
@@ -34,8 +40,6 @@ const Navbar = () => {
             </div>
         </div>
       </div>
-
-
     </>
   );
 };
