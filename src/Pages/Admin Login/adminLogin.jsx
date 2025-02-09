@@ -1,6 +1,6 @@
 
 
-const adminLogin = () => {
+const AdminLogin = () => {
   return (
     <div>
         <form>
@@ -10,4 +10,4 @@ const adminLogin = () => {
   )
 }
 
-export default adminLogin
+export default AdminLogin
