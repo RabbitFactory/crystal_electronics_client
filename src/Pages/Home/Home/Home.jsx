@@ -1,4 +1,5 @@
 import useStaticTexts from "../../../useStaticTexts/useStaticTexts"
+import Banner from "../Banner Section/Banner"
 
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
     <div className="bg-purple-400">
     Render home components here
     {texts.testingText}
+    <Banner></Banner>
     </div>
+    
   )
 }
 
