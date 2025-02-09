@@ -13,7 +13,9 @@ const Navbar = () => {
         </div>
 
         <div>Logo</div>
-        <div>Search</div>
+        <div>
+          <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+        </div>
         <div className="hidden lg:block">User</div>
         <div className="hidden lg:block">
           <button>Switch to Admin</button>
@@ -24,18 +26,17 @@ const Navbar = () => {
       {/* this relative and absolute combo is needed so it doesn't push the home page contents down */}
       <div className="relative z-50">
         <div
-          className={`absolute w-3/4 h-screen bg-gray-600 transition-all duration-500 ease-in-out will-change-transform ${
-  isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
-          }`}
+          className={`absolute w-3/4 h-screen bg-gray-600 transition-all duration-500 ease-in-out will-change-transform ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+            }`}
         >
-            <div className="w-3/4 h-screen bg-gray-600 flex flex-col p-4">
+          <div className="w-3/4 h-screen bg-gray-600 flex flex-col p-4">
 
 
-              <div className="mb-4 font-bold text-white">Collapsable</div>
-              <div className="mb-4 font-bold text-white">Collapsable</div>
-              <div className="mb-4 font-bold text-white">Collapsable</div>
-              <div className="mb-4 font-bold text-white">Collapsable</div>
-            </div>
+            <div className="mb-4 font-bold text-white">Collapsable</div>
+            <div className="mb-4 font-bold text-white">Collapsable</div>
+            <div className="mb-4 font-bold text-white">Collapsable</div>
+            <div className="mb-4 font-bold text-white">Collapsable</div>
+          </div>
         </div>
       </div>
     </div>

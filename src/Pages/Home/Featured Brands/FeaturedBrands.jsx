@@ -1,8 +1,7 @@
-import React from 'react'
 
 const FeaturedBrands = () => {
   return (
-    <div>FeaturedBrands</div>
+    <div className="py-20 bg-green-300">FeaturedBrands</div>
   )
 }
 

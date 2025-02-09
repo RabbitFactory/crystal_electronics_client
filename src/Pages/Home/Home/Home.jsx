@@ -1,16 +1,17 @@
-import useStaticTexts from "../../../useStaticTexts/useStaticTexts"
 import Banner from "../Banner Section/Banner"
+import FeaturedBrands from "../Featured Brands/FeaturedBrands"
+import Categories from "../Categories Section/Categories"
+import FeaturedProducts from "../Featured Products Section/FeaturedProducts"
 
 
 const Home = () => {
 
-  const texts = useStaticTexts()
-
   return (
-    <div className="bg-purple-400">
-    Render home components here
-    {texts.testingText}
+    <div>
     <Banner></Banner>
+    <FeaturedBrands></FeaturedBrands>
+    <Categories></Categories>
+    <FeaturedProducts></FeaturedProducts>
     </div>
     
   )
