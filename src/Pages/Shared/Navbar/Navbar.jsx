@@ -1,4 +1,4 @@
-import Hamburger from 'hamburger-react';
+import { Spin as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -6,10 +6,10 @@ const Navbar = () => {
 
   return (
     <div className='bg-orange-400'>
-      <div className="flex items-center justify-between py-6  bg-opacity-100 px-4 max-w-screen-xl mx-auto">
+      <div className="flex items-center justify-between py-6 px-4 max-w-screen-xl mx-auto">
         {/* Hamburger menu (visible on small screens) */}
         <div className="lg:hidden">
-          <Hamburger toggle={setIsOpen} toggled={isOpen} size={20} />
+          <Hamburger toggle={setIsOpen} toggled={isOpen} size={20} direction='right' />
         </div>
 
         <div>Logo</div>
@@ -23,19 +23,33 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Sidebar Menu */}
-      {/* this relative and absolute combo is needed so it doesn't push the home page contents down */}
       <div className="relative z-50">
         <div
-          className={`absolute w-3/4 h-screen bg-gray-600 transition-all duration-500 ease-in-out will-change-transform ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
-            }`}
+          className={`absolute top-0 left-0 w-3/4 h-screen bg-gray-800 text-white transition-all duration-500 ease-in-out ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"}`}
         >
-          <div className="w-3/4 h-screen bg-gray-600 flex flex-col p-4">
-
-
-            <div className="mb-4 font-bold text-white">Collapsable</div>
-            <div className="mb-4 font-bold text-white">Collapsable</div>
-            <div className="mb-4 font-bold text-white">Collapsable</div>
-            <div className="mb-4 font-bold text-white">Collapsable</div>
+          <div className="p-4">
+            <div className="collapse collapse-arrow bg-base-200 text-black">
+              <input type="checkbox" />
+              <div className="collapse-title text-xl font-medium">TV</div>
+              <div className="collapse-content">
+                <div className="collapse collapse-arrow bg-gray-300">
+                  <input type="checkbox" />
+                  <div className="collapse-title font-medium">Samsung</div>
+                  <div className="collapse-content">
+                    <button className="btn btn-sm w-full">Plasma</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="collapse collapse-arrow bg-base-200 text-black mt-2">
+              <input type="checkbox" />
+              <div className="collapse-title text-xl font-medium">Laptops</div>
+              <div className="collapse-content">
+                <button className="btn btn-sm w-full">Apple</button>
+                <button className="btn btn-sm w-full mt-1">Dell</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
